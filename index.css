@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: "Noto Sans KR", "돋움", sans-serif;
 }
 
 html, body {
@@ -197,5 +200,5 @@ html, body {
 }
 .item:hover img {
     transform: scale(1.1);
-    filter: blur(2px);
+    filter: blur(3px);
 }
