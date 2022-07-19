@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.mainBanner {
+    width: 100%;
+    height: 280px;
+    background: url("./img/banner.jpg") no-repeat center/cover ;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainBanner .text {
+    font-size: 36px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 170px;
+}
+
+.mainMenu {
+    border-radius: 5px;
+    background: orange;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.mainMenu ul {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.mainMenu ul li {
+    list-style: none;
+    display: block;
+    padding: 10px 10px 5px;
+    border-radius: 20px;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul li:hover {
+    padding-left: 20px;
+    background: rgb(255, 145, 0);
+
+}
+
+.writeBtn {
+    width: 100%;
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 16px;
+    position: relative;
+    transition: background 0.3s ease-in-out;
+    line-height: 1;
+}
+
+.writeBtn .arrow {
+    display: inline-block;
+    padding-left: 10px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.writeBtn:hover {
+    background: #ffffff;
+    border: 1px solid #000000;
+    color: #333333;
+}
+
+.writeBtn:hover .arrow {
+    transform: translateX(50px);
+}
+
+.itemWrap {
+    width: calc(100% - 190px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.item {
+    width: calc(25% - 8px);
+    aspect-ratio: 8 / 7;
+    margin-bottom: 16px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    background: url("../img/dochi.jpeg") center/cover;
+    overflow: hidden;    
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.textBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 25px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.textBox p {
+    margin: 5px 0 0;
+    color: #ffffff;
+}
+
+.textBox__name {
+    font-size: 22px;
+    font-weight: 500;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.textBox__price {
+    font-size: 16px;
+    font-weight: 400;
+    text-indent: 2px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0.1s;
+}
+
+.item:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;    
+    transition: opacity 0.2s ease-in-out;
+}
+
+.item:hover:after{
+    opacity: 1;
+}
+.item:hover .textBox__name,
+.item:hover .textBox__price {
+    transform: translateY(0);
+    opacity: 1;
+}
+.item:hover img {
+    transform: scale(1.1);
+    filter: blur(2px);
+}
