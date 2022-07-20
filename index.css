@@ -126,17 +126,22 @@ html, body {
     position: relative;
     border-radius: 5px;
     border: 1px solid #dddddd;
-    background: url("../img/dochi.jpeg") center/cover;
     overflow: hidden;    
+}
+
+.item .imgBox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease-in-out;
 }
 
 .textBox {
@@ -198,7 +203,7 @@ html, body {
     transform: translateY(0);
     opacity: 1;
 }
-.item:hover img {
+.item:hover .imgBox {
     transform: scale(1.1);
     filter: blur(3px);
 }
