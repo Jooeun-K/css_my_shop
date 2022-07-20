@@ -198,11 +198,13 @@ html, body {
 .item:hover:after{
     opacity: 1;
 }
+
 .item:hover .textBox__name,
 .item:hover .textBox__price {
     transform: translateY(0);
     opacity: 1;
 }
+
 .item:hover .imgBox {
     transform: scale(1.1);
     filter: blur(3px);
