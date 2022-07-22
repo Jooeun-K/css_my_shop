@@ -22,9 +22,24 @@ html, body {
 }
 
 .mainBanner .text {
-    font-size: 36px;
+    font-size: 48px;
     text-align: center;
     color: #ffffff;
+    animation: mainBannerText 1.2s ease-in-out;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
+
+@keyframes mainBannerText {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+        text-shadow: 0px 0px 2px rgba(0,0,0,0);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        text-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    }
 }
 
 .container {
@@ -67,13 +82,18 @@ html, body {
 .mainMenu ul li {
     list-style: none;
     display: block;
+}
+
+.mainMenu ul li a {
+    display: block;
     padding: 10px 10px 5px;
     border-radius: 20px;
     color: #ffffff;
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
-.sidebar ul li:hover {
+.sidebar ul li a:hover {
     padding-left: 20px;
     background: rgb(255, 145, 0);
 
@@ -84,12 +104,12 @@ html, body {
     background: #000000;
     color: #ffffff;
     border: 1px solid #000000;
-    padding: 10px 20px;
+    padding: 12px 20px 10px;
     text-align: left;
     font-size: 16px;
     position: relative;
     transition: background 0.3s ease-in-out;
-    line-height: 1;
+    cursor: pointer;
 }
 
 .writeBtn .arrow {
